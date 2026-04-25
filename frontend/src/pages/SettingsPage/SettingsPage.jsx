@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import styles from "./SettingsPage.module.scss";
 import Input from "../../components/Input/Input";
-import Select from "../../components/Select/select";
+import Select from "../../components/Select/Select";
 import Button from "../../components/Button/Button";
 import { useDispatch, useSelector } from "react-redux";
 import { updateSubjects } from "../../store/subjectsSlice";
