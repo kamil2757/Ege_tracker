@@ -10,7 +10,6 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "-": "^0.0.1",
     "@reduxjs/toolkit": "^2.11.2",
     "react": "^19.2.0",
     "react-circular-progressbar": "^2.2.0",
