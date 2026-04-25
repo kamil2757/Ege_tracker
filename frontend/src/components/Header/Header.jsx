@@ -30,7 +30,7 @@ export default function Header() {
           to="/profile"
           className={`${styles.profile} ${location.pathname == "/profile" ? styles.profile_active : ""}`}
         >
-          {user?.username ? user.username : "Твой будущий ник"}
+          {user?.username ? user.username : "Профиль"}
         </Link>
       </div>
     </header>
