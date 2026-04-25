@@ -1,0 +1,91 @@
+.CreateSubject {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
+  margin: 40px 0 90px 0;
+
+  .blockContent {
+    background-color: $main;
+    width: 600px;
+    padding: 60px;
+    border-radius: 6px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+      margin-bottom: 32px;
+    }
+
+    .ErrorBlock,
+    .SuccesBlock {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      width: 100%;
+
+      color: white;
+      padding: 14px 20px;
+      text-align: center;
+    }
+
+    .SuccesBlock {
+      background-color: $accent;
+    }
+
+    .ErrorBlock {
+      background-color: $error;
+    }
+  }
+}
+
+.btn_block {
+  margin-top: 20px;
+}
+
+.FormCreate {
+  width: 100%;
+  margin: 20px;
+
+  .InputsBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .subjInp {
+      display: flex;
+      gap: 10px;
+      transform: translateY(6px);
+      animation: fadeIn 0.4s ease forwards;
+      opacity: 0;
+
+      select {
+        flex: 3;
+      }
+
+      input {
+        flex: 2;
+      }
+    }
+
+    .sumScores {
+      border: 2px solid white;
+      border-radius: 6px;
+      padding: 6px 14px;
+    }
+  }
+}
+
+.SuccesBlock {
+  background-color: $accent;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,35 @@
+.CallToAction {
+  background-color: $main;
+  height: 320px;
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 200px;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+
+  h3 {
+    font-size: $fs-h3;
+    width: 80%;
+    min-width: 700px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 740px) {
+  .wrapper {
+
+    h3 {
+      font-size: $fs-h3;
+      width: auto;
+      min-width: auto;
+      text-align: center;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+$fs-xs: 0.75rem;   // 12px — подписи, мелкие метки
+$fs-sm: 0.875rem;  // 14px — вторичный текст
+$fs-base: 1rem;    // 16px — основной текст (БАЗА)
+$fs-lg: 1.125rem;  // 18px — акцентированный текст
+
+/* Headings (static) */
+$fs-h3: 1.25rem;   // 20px — заголовки блоков
+$fs-h2: 1.5rem;    // 24px — подзаголовки страниц
+
+/* Headings (fluid, clamp) */
+$fs-h1: clamp(2.2rem, 5vw, 2.8rem); // 28px → 36px
+
+$fw-extrathin: 200;
+$fw-thin: 300;
+$fw-regular: 400;
+$fw-medium: 500;
+$fw-semibold: 600;
+$fw-bold: 700;
+
+$container-width: 1360px;
+$container-padding: 20px;
+
+.container {
+  width: min(100% - $container-padding * 2, $container-width);
+  margin-inline: auto;
+}

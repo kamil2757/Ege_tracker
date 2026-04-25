@@ -1,0 +1,14 @@
+.MainTasks {
+    display: flex;
+    gap: 10px;
+    overflow: auto;
+  flex: 1;
+    
+  .block1,
+  .block2 {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+}

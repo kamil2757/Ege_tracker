@@ -1,0 +1,113 @@
+.ForWhat {
+  position: relative;
+  margin: 20px 0;
+
+  .information {
+    padding: 20px 0;
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .info {
+      height: 260px;
+      width: 78%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: end;
+      .miniText {
+        color: $accent;
+        text-align: center;
+        width: 600px;
+        font-size: $fs-sm;
+      }
+    }
+  }
+
+  img {
+    margin-left: -100px;
+    width: clamp(280px, 17vw, 320px);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    height: 280px;
+    inset: 0;
+    background: $main;
+    clip-path: polygon(0 0, 100% 5%, 100% 85%, 0 100%);
+    z-index: 0;
+  }
+}
+
+@media (max-width: 1522px) {
+  .ForWhat {
+    img {
+      margin-left: -20px;
+    }
+
+    .information {
+      .info {
+        height: 300px;
+        width: 70%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .ForWhat {
+    img {
+      margin-left: 0px;
+      width: 200px;
+    }
+
+    .information {
+      .info {
+        height: 240px;
+        width: 70%;
+
+        .miniText {
+          color: $accent;
+          text-align: center;
+          width: 90%;
+        }
+      }
+    }
+
+    &::before {
+      height: 220px;
+    }
+  }
+}
+
+
+@media (max-width: 765px) {
+  .ForWhat {
+    margin-top: 0px;
+    img {
+      display: none;
+    }
+
+    .information {
+      padding-top: 40px;
+      .info {
+        height: 240px;
+        width: 100%;
+
+        .miniText {
+          color: $accent;
+          text-align: center;
+          width: 90%;
+        }
+      }
+    }
+
+    &::before {
+      height: 220px;
+    }
+  }
+}

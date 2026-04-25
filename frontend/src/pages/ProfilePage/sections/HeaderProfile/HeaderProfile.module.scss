@@ -1,0 +1,22 @@
+.HeaderProfile{
+    background-color: $main;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+    padding: 30px;
+    margin-top: 10px;
+
+    .infoBlock{
+        display: flex;
+        flex-direction: column;
+        gap: 6px;
+
+        .UserName{
+            font-size: $fs-h1;
+        }
+    }
+}
+
+svg{
+    width: 24px;
+}

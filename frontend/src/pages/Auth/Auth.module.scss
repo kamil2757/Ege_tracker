@@ -1,0 +1,41 @@
+.Register,
+.Login {
+  background-color: $main;
+  width: 400px;
+
+  h1 {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+  .formBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    button {
+      margin: 20px 16px 12px 16px;
+    }
+  }
+
+  .miniText {
+    text-align: center;
+    font-size: $fs-sm;
+
+    a {
+      color: $accent;
+    }
+  }
+
+  .ErrorBlock {
+    background-color: $error;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    margin-bottom: 20px;
+
+    color: white;
+    padding: 14px 20px;
+    text-align: center;
+  }
+}

@@ -1,0 +1,53 @@
+$height-header: 80px;
+
+header {
+  height: $height-header;
+  display: flex;
+  background-color: $main;
+}
+.header_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  .profile_active {
+    background-color: $main-dark;
+  }
+
+  nav {
+    // a {
+    //   display: flex;
+    //   align-items: center;
+    //   height: $height-header;
+    //   transition: border-bottom 0.2s;
+    //   border-bottom: 2px solid rgba(0, 0, 0, 0);
+    //   &:hover {
+    //     border-bottom: 2px solid $dark;
+    //   }
+    // }
+
+    .subjects_active {
+      background-color: $main-dark;
+    }
+  }
+
+  a {
+    display: flex;
+    align-items: center;
+    height: $height-header;
+    transition: 0.2s;
+    padding-inline: 10px;
+
+    &:hover {
+      background-color: $main-dark;
+    }
+  }
+
+  .logoH1 {
+    font-size: $fs-h1;
+
+    &:hover {
+      background-color: $main;
+    }
+  }
+}

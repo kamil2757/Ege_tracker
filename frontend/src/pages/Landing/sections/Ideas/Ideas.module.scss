@@ -1,0 +1,97 @@
+.Ideas {
+  background-color: $main;
+  margin: 10px 0 100px 0;
+  height: 500px;
+  display: flex;
+  align-items: center;
+}
+
+.ideasWrapper {
+  display: flex;
+}
+
+.HeaderInfo {
+  h1 {
+    font-size: $fs-h1;
+  }
+  img {
+    width: 420px;
+    margin-left: -60px;
+  }
+}
+
+.ideasBlock {
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  width: 70%;
+  .idea {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    gap: 20px;
+    flex: 1;
+    background-color: #fff;
+    height: 360px;
+
+    border-radius: 6px;
+    transition: 0.3s;
+
+    &:hover {
+      margin-bottom: 16px;
+      @include shadow-block
+    }
+    h2 {
+      font-size: $fs-h2;
+    }
+
+    p {
+      width: 86%;
+      text-align: center;
+    }
+  }
+}
+
+@media (max-width: 1290px) {
+  .ideasBlock {
+    width: 90%;
+  }
+}
+
+@media (max-width: 1114px) {
+  .Ideas {
+    padding: 60px 0;
+    height: auto;
+  }
+
+  .ideasWrapper {
+    flex-direction: column;
+  }
+  .ideasBlock {
+    width: 100%;
+  }
+
+  .HeaderInfo {
+    img {
+      width: 320px;
+    }
+  }
+}
+
+@media (max-width: 740px) {
+  .HeaderInfo {
+    img {
+      width: 280px;
+    }
+  }
+
+  .ideasBlock {
+    flex-direction: column;
+
+    .idea {
+      padding: 20px 0;
+    }
+  }
+}

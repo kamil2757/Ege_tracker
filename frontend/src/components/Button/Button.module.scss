@@ -1,0 +1,29 @@
+.Button {
+  padding: 10px 68px;
+  border-radius: 6px;
+  height: max-content;
+}
+
+.filled {
+  background-color: $accent;
+  color: $bg-main;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $accent-dark;
+  }
+}
+
+.miniButton {
+}
+
+.outlined {
+  border: 2px solid $accent;
+  color: $accent;
+  background: transparent;
+}
+
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}

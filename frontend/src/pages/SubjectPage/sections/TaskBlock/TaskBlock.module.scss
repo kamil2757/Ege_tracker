@@ -1,0 +1,26 @@
+.TaskBlock {
+  display: flex;
+  align-items: center;
+  background-color: $main;
+  border-radius: 6px;
+  padding: 0 20px;
+  justify-content: space-between;
+}
+
+.iconPen {
+  width: 26px;
+  margin: 0 6px;
+}
+
+.progressbar {
+  margin: 0 10px;
+  width: 50%;
+}
+
+.title {
+  min-height: 64px;
+  font-size: $fs-xs;
+  width: 50%;
+  display: flex;
+  align-items: center;
+}

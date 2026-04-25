@@ -1,0 +1,38 @@
+footer {
+  background-color: $main;
+  font-size: $fs-sm;
+}
+
+.footer_wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0;
+
+
+  .info_block {
+    width: 26%;
+
+    .logoH1 {
+      font-size: $fs-h1;
+    }
+
+    .siteInfo{
+        padding: 14px 0 40px 0;
+    }
+  }
+}
+
+.links_block {
+  display: flex;
+  gap: 100px;
+
+  .block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    .link {
+    }
+  }
+}

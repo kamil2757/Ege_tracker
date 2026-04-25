@@ -1,0 +1,97 @@
+.SettingsPage {
+  background-color: $main;
+  border-radius: 6px;
+  margin-block: 10px;
+  padding: 40px;
+
+  .formSettings {
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+
+    button {
+      width: 300px;
+    }
+  }
+}
+
+.UserSubjects,
+.UserData {
+  h1 {
+    margin-bottom: 20px;
+  }
+}
+
+.UserData {
+  position: relative;
+  input {
+    width: 50%;
+  }
+
+  .logoutText {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    color: $grey;
+    cursor: pointer;
+  }
+}
+
+.InputsBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .subjInp {
+    display: flex;
+    gap: 10px;
+    transform: translateY(6px);
+    animation: fadeIn 0.4s ease forwards;
+    opacity: 0;
+
+    select {
+      flex: 3;
+    }
+
+    input {
+      flex: 2;
+    }
+  }
+
+  .sumScores {
+    border: 2px solid white;
+    border-radius: 6px;
+    padding: 6px 14px;
+  }
+}
+
+.btn_settings {
+  margin-top: 20px;
+}
+
+.ErrorBlock,
+.SuccesBlock {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 6px;
+  margin-bottom: 20px;
+
+  color: white;
+  padding: 14px 20px;
+  text-align: center;
+}
+
+.SuccesBlock{
+  background-color: $accent;
+}
+
+.ErrorBlock {
+  background-color: $error;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

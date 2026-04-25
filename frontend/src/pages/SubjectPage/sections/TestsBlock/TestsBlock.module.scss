@@ -1,0 +1,101 @@
+.TestsBlock {
+  display: flex;
+  margin: 10px 0;
+  gap: 10px;
+}
+
+.NoTestsBlock {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: $main;
+  border-radius: 6px;
+  margin: 10px 0;
+  .wrapper {
+    margin: 50px 0;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    p {
+      text-align: center;
+    }
+  }
+}
+
+.LastTest {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .infoLastTest {
+    background-color: $main;
+    border-radius: 6px;
+    padding: 20px 16px;
+    display: flex;
+    gap: 20px;
+
+    transition: 0.2s;
+    cursor: pointer;
+
+    &:hover {
+      background-color: $main-dark;
+    }
+
+    .section1 {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+
+      color: $grey;
+
+      .numbers {
+        display: flex;
+        flex-wrap: wrap;
+        .task{
+          font-size: $fs-sm;
+          margin: 0 4px 0 4px;
+        }
+
+        .failed{
+          color: $error;
+        }
+      }
+    }
+  }
+
+  button{
+    margin-top: 0;
+  }
+}
+
+.otherTests {
+  width: 55%;
+  display: flex;
+  gap: 10px;
+
+  .blockTest {
+    background-color: $main;
+    border-radius: 6px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    padding: 30px 16px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    &:hover {
+      background-color: $main-dark;
+    }
+
+    .info {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+}

@@ -1,0 +1,14 @@
+.AuthLayout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    margin: 40px 0 90px 0;
+}
+
+.BlockAuth{
+    background-color: $main;
+    display: flex;
+    padding: 60px;
+    border-radius: 6px;
+}

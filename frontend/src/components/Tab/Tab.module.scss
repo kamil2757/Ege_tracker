@@ -1,0 +1,20 @@
+.Tab {
+  background-color: $main;
+
+  padding: 10px 0;
+  width: 200px;
+  border-radius: 6px;
+  transition: 0.2s;
+
+  &:hover {
+    background-color: $main-dark;
+  }
+}
+.activeTab {
+  background-color: $accent;
+  color: white;
+
+  &:hover {
+    background-color: $accent-dark;
+  }
+}
