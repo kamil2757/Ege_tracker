@@ -162,7 +162,7 @@ export default function CreateSubject() {
             /> */}
           </div>
           <div className={styles.btn_block}>
-            <Button>Готова</Button>
+            <Button>Готово</Button>
           </div>
         </form>
       </div>
