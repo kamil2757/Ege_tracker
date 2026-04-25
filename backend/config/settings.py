@@ -12,6 +12,7 @@ https://docs.djangoproject.com/en/6.0/ref/settings/
 import os
 from datetime import timedelta
 from pathlib import Path
+import dj_database_url
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -131,17 +132,26 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'ege_tracker',       # база, которую создал
-        'USER': 'ege_user',          # пользователь
-        'PASSWORD': '12345',         # пароль
-        'HOST': 'localhost',         # если локально
-        'PORT': '5432',              # стандартный порт
+if 'RENDER' in os.environ:
+    # Настройки для Render (берем из переменной DATABASE_URL)
+    DATABASES = {
+        'default': dj_database_url.config(
+            conn_max_age=600,
+            conn_health_checks=True,
+        )
     }
-}
+else:
+    # Твои локальные настройки для компьютера
+    DATABASES = {
+        'default': {
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'ege_tracker',
+            'USER': 'ege_user',
+            'PASSWORD': '12345',
+            'HOST': 'localhost',
+            'PORT': '5432',
+        }
+    }
 
 AUTH_USER_MODEL = "users.User"
 
