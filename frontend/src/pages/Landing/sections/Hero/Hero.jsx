@@ -16,7 +16,7 @@ export default function Hero() {
           ещё никогда не была такой простой и наглядной
         </p>
         <Link to={"/auth/login"}>
-          <Button>начать</Button>
+          <Button>Начать</Button>
         </Link>
       </div>
       <div className={styles.Img_block}>

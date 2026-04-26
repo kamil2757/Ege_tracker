@@ -1,3 +1,5 @@
+import os
+
 from django.contrib.auth import authenticate, get_user_model
 from rest_framework import status
 from rest_framework.exceptions import AuthenticationFailed, ValidationError
@@ -29,12 +31,17 @@ class LogoutView(APIView):
 
 
 def set_refresh_cookie(response, refresh_token):
+    # Проверяем, в какой среде мы находимся (по наличию RENDER или DEBUG)
+    is_production = os.environ.get('RENDER') or os.environ.get('DEBUG', 'False') == 'False'
+
     response.set_cookie(
         key="refresh",
         value=str(refresh_token),
         httponly=True,
-        secure=False,  # True в production
-        samesite="Lax",
+        # В продакшене ВСЕГДА True, для localhost можно False
+        secure=True if is_production else False,
+        # В продакшене ВСЕГДА "None" для разных доменов
+        samesite="None" if is_production else "Lax",
         max_age=7 * 24 * 60 * 60,
     )
 
