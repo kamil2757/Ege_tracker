@@ -8,6 +8,7 @@ import { updateSubjects } from "../../store/subjectsSlice";
 import { getSubjects } from "../../store/subjectsSlice";
 import { clearAuth, logout } from "../../store/authSlice";
 import { clearUpdateStatus } from "../../store/subjectsSlice";
+import { Navigate, useNavigate } from "react-router";
 
 const subjects = [
   { value: "math_profile", label: "Математика (профильная)" },
@@ -27,6 +28,7 @@ export default function SettingsPage() {
   const { items, error, updateStatus } = useSelector((state) => state.subjects);
   const { user } = useSelector((state) => state.auth);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [formData, setFormData] = useState({
     volume_subjects: "3",
   });
@@ -54,7 +56,11 @@ export default function SettingsPage() {
   }, [user]);
 
   useEffect(() => {
-    if (items && items.length > 0) {
+    if (items.length == 0) {
+       navigate("/create-subjects", { replace: true });
+       return
+    }
+    if (items) {
       setFormData({ volume_subjects: items.length });
       console.log(items);
       setSubjectsData(
