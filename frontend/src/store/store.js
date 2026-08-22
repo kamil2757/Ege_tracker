@@ -7,7 +7,7 @@ const store = configureStore({
     reducer:{
         auth: authReducer,
         subjects: subjectsReducer
-    }
+    },
 })
 
 export default store

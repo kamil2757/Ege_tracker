@@ -38,9 +38,9 @@ export default function CreateSubject() {
 
   function validation(value) {
     if (isNaN(value)) {
-      for (const it of subjectsData.values()){
-        if (it.subject == value){
-          return false
+      for (const it of subjectsData.values()) {
+        if (it.subject == value) {
+          return false;
         }
       }
     } else {
@@ -65,7 +65,6 @@ export default function CreateSubject() {
 
   useEffect(() => {
     if (createStatus == "succeeded") {
-
       navigate("/subjects");
     }
   }, [createStatus]);
@@ -76,25 +75,34 @@ export default function CreateSubject() {
   }
 
   function handleChangeVolumeSubjects(e) {
-    const value = Number(e.target.value);
-    const count = getCorrectValue(value);
+    const oldValue = formData.volume_subjects;
+
+    let value = Number(e.target.value);
+    if (value == 0){
+      console.log(1)
+      value = ''
+    }
+    if (value > 14) {
+      value = oldValue;
+    }
+    console.log(value)
 
     setFormData((prev) => ({
       ...prev,
-      volume_subjects: value > 0 ? value : "",
+      volume_subjects: value,
     }));
 
     setSubjectsData((prev) => {
       const newArr = [...prev];
 
-      if (count > newArr.length) {
-        while (newArr.length < count) {
+      if (value > newArr.length) {
+        while (newArr.length < value) {
           newArr.push({ subject: "", score: "" });
         }
       }
 
-      if (count < newArr.length) {
-        newArr.length = count;
+      if (value < newArr.length) {
+        newArr.length = value;
       }
 
       return newArr;

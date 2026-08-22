@@ -120,8 +120,8 @@ const subjectsSlice = createSlice({
     },
   },
 
-  extraReducers: (buidler) => {
-    buidler
+  extraReducers: (builder) => {
+    builder
       .addCase(createSubjects.pending, (state) => {
         state.createStatus = "loading";
         state.error = null;

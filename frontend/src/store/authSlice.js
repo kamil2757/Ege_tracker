@@ -13,7 +13,7 @@ export const logout = createAsyncThunk(
   "auth/logout",
   async (_, { rejectWithValue }) => {
     try {
-      await api.post(
+      const response = await api.post(
         "/api/users/logout/",
         {},
         {

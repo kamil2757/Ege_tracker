@@ -150,8 +150,16 @@ WSGI_APPLICATION = 'config.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/6.0/ref/settings/#databases
 
-if 'RENDER' in os.environ:
-    # Настройки для Render (берем из переменной DATABASE_URL)
+# 1. Сначала определим, на сервере мы или нет
+IS_RENDER = 'RENDER' in os.environ
+
+# 2. Настройка DEBUG
+# Если на сервере — False, если дома — True
+DEBUG = not IS_RENDER
+
+# 3. Настройка базы данных
+if IS_RENDER:
+    # Настройки для сервера (Render + Supabase/Postgres)
     DATABASES = {
         'default': dj_database_url.config(
             conn_max_age=600,
@@ -159,18 +167,13 @@ if 'RENDER' in os.environ:
         )
     }
 else:
-    # Твои локальные настройки для компьютера
+    # Настройки для локальной разработки (SQLite)
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.postgresql',
-            'NAME': 'ege_tracker',
-            'USER': 'ege_user',
-            'PASSWORD': '12345',
-            'HOST': 'localhost',
-            'PORT': '5432',
+            'ENGINE': 'django.db.backends.sqlite3',
+            'NAME': BASE_DIR / 'db.sqlite3',
         }
     }
-
 AUTH_USER_MODEL = "users.User"
 
 # Password validation
