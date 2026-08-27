@@ -167,13 +167,17 @@ if IS_RENDER:
         )
     }
 else:
-    # Настройки для локальной разработки (SQLite)
     DATABASES = {
         'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
+            'ENGINE': 'django.db.backends.postgresql',
+            'NAME': 'ege_tracker',
+            'USER': 'postgres',
+            'PASSWORD': '123',  # ТОТ САМЫЙ ПАРОЛЬ, КОТОРЫЙ ТЫ ЗАДАЛ ЧЕРЕЗ ALTER ROLE
+            'HOST': '127.0.0.1',
+            'PORT': '5432',
         }
     }
+
 AUTH_USER_MODEL = "users.User"
 
 # Password validation

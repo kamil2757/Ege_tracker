@@ -22,7 +22,8 @@ export default function TaskBlock({ number, title, taskId, percent }) {
         <ProgressBar progress={percent} widthBar="100%" heightBar="11px" />
       </div>
       <Button
-        mini={true}
+        size="s"
+        filled={false}
         onClick={() => handleUpdateTask(taskId)}
         disabled={taskStatus === "loading"}
       >

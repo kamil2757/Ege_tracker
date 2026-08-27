@@ -1,7 +1,13 @@
 .Button {
-  padding: 10px 68px;
   border-radius: 6px;
   height: max-content;
+}
+
+.s {
+  padding: 0px;
+}
+.m {
+  padding: 10px 68px;
 }
 
 .filled {
@@ -12,9 +18,6 @@
   &:hover {
     background-color: $accent-dark;
   }
-}
-
-.miniButton {
 }
 
 .outlined {

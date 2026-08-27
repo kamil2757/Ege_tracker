@@ -55,6 +55,9 @@ export default function TestsBlock({ setIsOpen }) {
           </div>
           <div className={styles.section2}>
             <CircularProgress
+              pathColor="#e6ad60"
+              trailColor="#ffffffff"
+              size={120}
               value={
                 subject.score_conversions[lastTest.score - 1]
                   ?.secondary_score ?? 0

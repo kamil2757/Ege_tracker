@@ -93,7 +93,7 @@ export default function Login() {
           autoComplete="password"
           value={formData.password}
         />
-        <Button disabled={loading}>{loading ? "Вход..." : "Войти"}</Button>
+        <Button disabled={loading} type="submit">{loading ? "Вход..." : "Войти"}</Button>
       </form>
       <p className={styles.miniText}>
         Нет аккаунта? <Link to="/auth/register">Cоздай</Link>

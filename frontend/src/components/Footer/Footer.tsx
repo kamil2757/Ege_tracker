@@ -7,7 +7,7 @@ export default function Footer() {
     <footer>
       <div className={"container " + styles.footer_wrapper}>
         <div className={styles.info_block}>
-          <Link className={styles.logoH1}>ЕТрекер</Link>
+          <Link className={styles.logoH1} to={}>ЕТрекер</Link>
           <p className={styles.siteInfo}>
             — сервис для осознанной подготовки к ЕГЭ. Помогает фиксировать
             понимание заданий, отслеживать пробники и видеть прогресс по
