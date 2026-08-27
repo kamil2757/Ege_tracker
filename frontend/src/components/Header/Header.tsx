@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import styles from "./Header.module.scss";
 import { useEffect } from "react";
 import { useSelector } from "react-redux";
+import icon from "../../assets/icons/mini-icon.png";
 
 export default function Header() {
   const location = useLocation();
