@@ -1,6 +1,8 @@
 # 📊 EGE Tracker
 
 > Веб-приложение для аналитики, трекинга и объективной оценки уровня подготовки к ЕГЭ.
+> [![Live Demo](https://img.shields.io/badge/🌐_Live_Demo-ege--tracker.vercel.app-2ea44f?style=for-the-badge)](https://ege-tracker.vercel.app/)
+> *(⚠️ В деплое доступен только ЛЕНДИНГ, так как бэкенд-сервер временно не запущен)*.
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react)
 ![Redux Toolkit](https://img.shields.io/badge/Redux--Toolkit-764ABC?logo=redux)
@@ -28,7 +30,7 @@
 
 ## 🖼 Скриншоты интерфейса
 
-| Главная страница | страница предмет | запись пробника в предмете |
+| Главная страница | страница предмета | запись пробника в предмете |
 |:---:|:---:|:---:|
 | ![subjects](./assets/subjects.jpg) | ![subject](./assets/subject.jpg) | ![enter_test](./assets/enter_test.jpg) |
 
