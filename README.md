@@ -28,9 +28,9 @@
 
 ## 🖼 Скриншоты интерфейса
 
-| Главная страница / Аналитика | Модальные окна / Пробники |
-|:---:|:---:|
-| ![Dashboard](./assets/dashboard.png) | ![Analytics](./assets/analytics.png) |
+| Главная страница | страница предмет | запись пробника в предмете |
+|:---:|:---:|:---:|
+| ![subjects](./assets/subjects.jpg) | ![subject](./assets/subject.jpg) | ![enter_test](./assets/enter_test.jpg) |
 
 ---
 
